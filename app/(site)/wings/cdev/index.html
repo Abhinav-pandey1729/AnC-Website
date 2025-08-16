@@ -1,0 +1,1506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Career Development Wing - IIT Kanpur</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>
+tailwind.config = {
+  darkMode: 'class',
+  theme: {
+    extend: {
+      colors: {
+        primary: '#4f46e5',
+        secondary: '#10b981'
+      },
+      borderRadius: {
+        'none': '0px',
+        'sm': '4px',
+        DEFAULT: '8px',
+        'md': '12px',
+        'lg': '16px',
+        'xl': '20px',
+        '2xl': '24px',
+        '3xl': '32px',
+        'full': '9999px',
+        'button': '8px'
+      }
+    }
+  }
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+  font-family: 'Inter', sans-serif;
+}
+.hero-section {
+  background-image: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,0.9) 40%, rgba(255,255,255,0.1) 100%), url('https://static.readdy.ai/image/35e1c9ff51a554d6209e391010b44104/9e70e6573dcc8bd1218f3276208f45d8.webp');
+  background-size: cover;
+  background-position: center right;
+}
+.dark .hero-section {
+  background-image: linear-gradient(to right, rgba(17,24,39,1) 0%, rgba(17,24,39,0.9) 40%, rgba(17,24,39,0.1) 100%), url('https://static.readdy.ai/image/35e1c9ff51a554d6209e391010b44104/9e70e6573dcc8bd1218f3276208f45d8.webp');
+  /* 17,24,39 is Tailwind's gray-900 */
+  background-size: cover;
+  background-position: center right;
+}
+.stats-section {
+  background-image: linear-gradient(to right, rgba(79, 70, 229, 0.9), rgba(79, 70, 229, 0.8)), url('https://readdy.ai/api/search-image?query=abstract%20pattern%20with%20subtle%20grid%20lines%2C%20professional%20light%20blue%20background%2C%20minimal%20design%2C%20corporate%20style%2C%20clean%20and%20modern%2C%20soft%20texture&width=1600&height=600&seq=2&orientation=landscape');
+  background-size: cover;
+  background-position: center;
+}
+.custom-shadow {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+</style>
+</head>
+<body class="bg-gray-50 dark:bg-gray-900 text-black dark:text-white">
+<!-- Header -->
+<header class="bg-white dark:bg-gray-950 shadow-sm sticky top-0 z-50 ">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-20">
+<div class="flex items-center gap-2">
+<a href="https://www.anciitk.co.in/" class="flex items-center ">
+  <img src="./Cdev_logo.png" alt="CDEV Logo" class="h-20 w-21">           
+ 
+
+</a>
+</div>
+<div class="hidden md:block text-center">
+<span class="text-xl text-bold text-black dark:text-white font-medium">Career Developement Wing &ndash; Academic and Career Council, IIT Kanpur</span>
+</div>
+<!-- Desktop Navigation -->
+<!-- Desktop Navigation -->
+<nav class="hidden md:flex items-center space-x-8 ml-5 mr-0">
+  <a href="#home" class="nav-link text-primary font-medium" data-target="home">Home</a>
+  <a href="#about" class="nav-link text-black dark:text-white hover:text-primary font-medium" data-target="about">About</a>
+  <a href="#itp" class="nav-link text-black dark:text-white hover:text-primary font-medium" data-target="itp">ITP</a>
+  <a href="#collaborations" class="nav-link text-black dark:text-white hover:text-primary font-medium" data-target="collaborations">Collaborations</a>
+  <a href="#contact" class="nav-link text-black dark:text-white hover:text-primary font-medium" data-target="contact">Contact</a>
+</nav>
+<button id="theme-toggle" type="button" aria-label="Toggle dark mode" class="w-10 h-10 flex items-center justify-center text-black dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-full transition-colors">
+  <i id="theme-toggle-icon" class="ri-sun-line"></i>
+</button>
+<!--Navigation-->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll(".nav-link");
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const id = entry.target.getAttribute("id");
+
+          navLinks.forEach(link => {
+            link.classList.remove("text-primary");
+            link.classList.remove("font-bold");
+          });
+
+          const activeLink = document.querySelector(`.nav-link[data-target="${id}"]`);
+          if (activeLink) {
+            activeLink.classList.add("text-primary");
+            activeLink.classList.add("font-bold");
+          }
+        }
+      });
+    }, {
+      threshold: 0.3, // adjust depending on when you want the link to activate
+    });
+
+    sections.forEach(section => observer.observe(section));
+  });
+</script>
+
+<!-- Dark Mode Toggle -->
+
+
+</nav>
+<!-- Mobile Navigation Button -->
+<div class="md:hidden flex items-center gap-2">
+<button id="theme-toggle-mobile" class="w-10 h-10 flex items-center justify-center text-black dark:text-gray-300">
+<i class="ri-sun-line"></i>
+</button>
+<button id="mobile-menu-button" class="w-10 h-10 flex items-center justify-center text-black dark:text-gray-300">
+<i class="ri-menu-line ri-lg"></i>
+</button>
+</div>
+</div>
+<!-- Mobile Navigation Menu -->
+<div id="mobile-menu" class="md:hidden hidden pb-4 bg-white dark:bg-gray-950">
+<div class="flex flex-col space-y-3">
+<a href="#" class="text-primary font-medium py-2">Home</a>
+<a href="#about" class="text-black dark:text-white hover:text-primary font-medium py-2">About</a>
+<a href="#itp" class="text-black dark:text-white hover:text-primary font-medium py-2">ITP</a>
+<a href="#collaborations" class="text-black dark:text-white hover:text-primary font-medium py-2">Collaborations</a>
+<a href="#contact" class="text-black dark:text-white hover:text-primary font-medium py-2">Contact</a>
+</div>
+</div>
+</div>
+</header>
+<!-- Hero Section -->
+<section id="home" class="hero-section py-20 md:py-32">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 w-full">
+<div class="max-w-2xl">
+<h1 class="text-4xl md:text-5xl font-bold text-black dark:text-white mb-6">Career Development Wing</h1>
+<p class="text-xl text-gray-700 dark:text-gray-300 mb-8">Empowering students with the skills and opportunities to build successful careers through guidance, training, and industry connections.</p>
+<div class="flex flex-wrap gap-4">
+<a href="#about" class="bg-primary text-white px-6 py-3 rounded-button font-medium hover:bg-primary/90 transition whitespace-nowrap">Learn More</a>
+<a href="#contact" class="bg-white dark:bg-gray-950 text-primary border border-primary px-6 py-3 rounded-button font-medium hover:bg-gray-50 dark:hover:bg-gray-900 transition whitespace-nowrap">Contact Us</a>
+</div>
+</div>
+</div>
+
+<!-- Featured Initiatives -->
+
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-12">
+<h2 class="text-3xl font-bold text-black dark:text-white mb-4">Our Key Initiatives</h2>
+<p class="text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">Discover the programs and services offered by the Career Development Wing to help students navigate their professional journey.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Initiative 1 -->
+<div class="bg-white dark:bg-gray-900 rounded-lg p-6 custom-shadow hover:shadow-md transition">
+<div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+<i class="ri-briefcase-line text-primary ri-lg"></i>
+</div>
+<h3 class="text-xl font-semibold text-black dark:text-white mb-3">Internship Training Program</h3>
+<p class="text-gray-600 dark:text-gray-300 mb-4">Comprehensive training to prepare students for internship opportunities at top companies through mock interviews, resume building, and technical preparation.</p>
+<a href="#itp" class="text-primary font-medium flex items-center">
+Learn more
+<i class="ri-arrow-right-line ml-1"></i>
+</a>
+</div>
+<!-- Initiative 2 -->
+<div class="bg-white dark:bg-gray-900 rounded-lg p-6 custom-shadow hover:shadow-md transition">
+<div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+<i class="ri-team-line text-primary ri-lg"></i>
+</div>
+<h3 class="text-xl font-semibold text-black dark:text-white mb-3">Industry Collaborations</h3>
+<p class="text-gray-600 dark:text-gray-300 mb-4">Strategic partnerships with leading organizations like GeeksForGeeks to provide students with exclusive resources, workshops, and placement opportunities.</p>
+<a href="#collaborations" class="text-primary font-medium flex items-center">
+Learn more
+<i class="ri-arrow-right-line ml-1"></i>
+</a>
+</div>
+<!-- Initiative 3 -->
+<div class="bg-white dark:bg-gray-900 rounded-lg p-6 custom-shadow hover:shadow-md transition">
+<div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+<i class="ri-file-list-3-line text-primary ri-lg"></i>
+</div>
+<h3 class="text-xl font-semibold text-black dark:text-white mb-3">Resume Reviews</h3>
+<p class="text-gray-600 dark:text-gray-300 mb-4">Personalized resume feedback sessions conducted by experienced professionals to help students create impactful resumes that stand out to recruiters.</p>
+<a href="#about" class="text-primary font-medium flex items-center">
+Learn more
+<i class="ri-arrow-right-line ml-1"></i>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!--
+
+<section class="stats-section py-16 text-white">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold mb-4">Our Impact</h2>
+      <p class="max-w-3xl mx-auto">The Career Development Wing has been instrumental in shaping the professional journeys of IIT Kanpur students.</p>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-8">
+      
+      <div class="text-center">
+        <div class="text-4xl font-bold mb-2">500+</div>
+        <p class="text-white/90">Students Placed</p>
+      </div>
+      
+      <div class="text-center">
+        <div class="text-4xl font-bold mb-2">200+</div>
+        <p class="text-white/90">Workshops Conducted</p>
+      </div>
+      
+      <div class="text-center">
+        <div class="text-4xl font-bold mb-2">1000+</div>
+        <p class="text-white/90">Resume Reviews</p>
+      </div>
+    </div>
+  </div>
+</section>
+-->
+<!-- About Section -->
+<section id="about" class="pt-32 py-16 bg-white dark:bg-gray-950">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-12">
+<h2 class="text-3xl font-bold text-black dark:text-white mb-4">About Us</h2>
+<p class="text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">The Career Development Wing operates under the Academics and Career Council of IIT Kanpur, dedicated to enhancing students' professional growth.</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+<div>
+<h3 class="text-2xl font-semibold text-black dark:text-white mb-4">Our Mission</h3>
+<p class="text-gray-600 dark:text-gray-300 mb-6">The Career Development Wing aims to bridge the gap between academic knowledge and industry requirements by providing comprehensive training, resources, and opportunities to students. We strive to equip every student with the skills and confidence needed to excel in their professional careers.</p>
+<h3 class="text-2xl font-semibold text-black dark:text-white mb-4">Our Vision</h3>
+<p class="text-gray-600 dark:text-gray-300">To create a robust ecosystem that nurtures professional growth, facilitates industry connections, and empowers students to achieve their career aspirations, making IIT Kanpur a hub for future leaders and innovators.</p>
+</div>
+<div class="rounded-lg overflow-hidden">
+<img src="https://static.readdy.ai/image/35e1c9ff51a554d6209e391010b44104/9debe3ad2d2c0cf1b741946acff1a1d6.webp" alt="Career Development Wing in action" class="w-full h-full object-cover object-top">
+</div>
+</div>
+<!-- Services Section -->
+
+<div class="mb-16">
+  <h3 class="text-2xl font-semibold text-black dark:text-white mb-8 text-center">Our Services</h3>
+  <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-5 gap-6 justify-items-center ">
+    
+    <!-- Service 1 -->
+    <div class="bg-white dark:bg-gray-900 rounded-lg p-6 custom-shadow hover:shadow-md transition w-full sm:w-80">
+      <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+        <i class="ri-user-voice-line text-primary ri-lg"></i>
+      </div>
+      <h4 class="text-lg font-semibold text-black dark:text-white mb-3">Career Counseling</h4>
+      <p class="text-gray-600 dark:text-gray-300">One-on-one sessions with experienced counselors to help students identify their strengths and career paths.</p>
+    </div>
+
+    <!-- Service 2 -->
+    <div class="bg-white dark:bg-gray-900 rounded-lg p-6 custom-shadow hover:shadow-md transition w-full sm:w-80">
+      <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+        <i class="ri-file-list-3-line text-primary ri-lg"></i>
+      </div>
+      <h4 class="text-lg font-semibold text-black dark:text-white mb-3">Resume Reviews</h4>
+      <p class="text-gray-600 dark:text-gray-300">Detailed feedback on resumes to help students create impactful documents that highlight their achievements.</p>
+    </div>
+
+    <!-- Service 3 -->
+    <div class="bg-white dark:bg-gray-900 rounded-lg p-6 custom-shadow hover:shadow-md transition w-full sm:w-80">
+      <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+        <i class="ri-chat-3-line text-primary ri-lg"></i>
+      </div>
+      <h4 class="text-lg font-semibold text-black dark:text-white mb-3">Mock Tests & Interviews</h4>
+      <p class="text-gray-600 dark:text-gray-300">Practice interviews with industry professionals to prepare students for real-world interview scenarios.</p>
+    </div>
+
+    <!-- Service 4 -->
+    <div class="bg-white dark:bg-gray-900 rounded-lg p-6 custom-shadow hover:shadow-md transition w-full sm:w-80">
+      <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+        <i class="ri-presentation-line text-primary ri-lg"></i>
+      </div>
+      <h4 class="text-lg font-semibold text-black dark:text-white mb-3">Workshops</h4>
+      <p class="text-gray-600 dark:text-gray-300">Regular workshops on various topics like technical skills, soft skills, and industry trends.</p>
+    </div>
+
+    <!-- Service 5 -->
+    <div class="bg-white dark:bg-gray-900 rounded-lg p-6 custom-shadow hover:shadow-md transition w-full sm:w-80">
+      <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+        <i class="ri-group-line text-primary ri-lg"></i>
+      </div>
+      <h4 class="text-lg font-semibold text-black dark:text-white mb-3">Mock GDs</h4>
+      <p class="text-gray-600 dark:text-gray-300">Simulated group discussions to help students develop communication and leadership skills.</p>
+    </div>
+
+  </div>
+</div>
+
+<!-- ITP Section -->
+<section id="itp" class="pt-16 pb-4 bg-gray-50 dark:bg-gray-900">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-12">
+<h2 class="text-3xl font-bold text-black dark:text-white mb-4">Internship Training Program (ITP)</h2>
+<p class="text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">Our flagship program designed to prepare students for securing internships at top companies through comprehensive training and guidance.</p>
+</div>
+<!-- Program Overview -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+<div class="order-2 lg:order-1">
+<h3 class="text-2xl font-semibold text-black dark:text-white mb-4">Program Overview</h3>
+<p class="text-gray-600 dark:text-gray-300 mb-6">The Internship Training Program is a structured initiative that equips students with the necessary skills and knowledge to excel in internship interviews and placements. The program covers technical preparation, soft skills development, resume building, and mock interviews.</p>
+<div class="space-y-4">
+<div class="flex items-start">
+<div class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center mt-1 flex-shrink-0">
+<i class="ri-check-line text-primary"></i>
+</div>
+<p class="ml-3 text-gray-600 dark:text-gray-300">Comprehensive technical preparation for coding interviews</p>
+</div>
+<div class="flex items-start">
+<div class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center mt-1 flex-shrink-0">
+<i class="ri-check-line text-primary"></i>
+</div>
+<p class="ml-3 text-gray-600 dark:text-gray-300">Resume building workshops and personalized feedback</p>
+</div>
+<div class="flex items-start">
+<div class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center mt-1 flex-shrink-0">
+<i class="ri-check-line text-primary"></i>
+</div>
+<p class="ml-3 text-gray-600 dark:text-gray-300">Mock interviews with industry professionals</p>
+</div>
+<div class="flex items-start">
+<div class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center mt-1 flex-shrink-0">
+<i class="ri-check-line text-primary"></i>
+</div>
+<p class="ml-3 text-gray-600 dark:text-gray-300">Soft skills development sessions</p>
+</div>
+</div>
+</div>
+<div class="order-1 lg:order-2 rounded-lg overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=university%20students%20in%20a%20training%20workshop%2C%20professional%20setting%2C%20career%20development%2C%20students%20engaged%20in%20learning%2C%20modern%20classroom%2C%20technical%20training%2C%20programming%20session%2C%20high%20quality&width=600&height=400&seq=4&orientation=landscape" alt="Internship Training Program" class="w-full h-full object-cover object-top">
+</div>
+</div>
+<!-- Program Resources -->
+<div class="mb-16">
+<h3 class="text-2xl font-semibold text-black dark:text-white mb-8 text-center">Program Resources</h3>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Sessions -->
+<div class="bg-white dark:bg-gray-900 rounded-lg p-6 custom-shadow hover:shadow-md transition group">
+<div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4 group-hover:bg-primary/20 transition">
+<i class="ri-presentation-line text-primary ri-lg"></i>
+</div>
+<h4 class="text-lg font-semibold text-black dark:text-white mb-3">Training Sessions</h4>
+<p class="text-gray-600 dark:text-gray-300 mb-4">Access recordings of our comprehensive training sessions covering technical topics, soft skills, and interview preparation.</p>
+<a href="https://drive.google.com/drive/folders/1zJBCoNXUq-21GLSjNtL3WYQohwTK-M6W" target="_blank" class="inline-flex items-center text-primary hover:text-primary/80 transition">
+<span class="mr-2">Access Sessions</span>
+<i class="ri-external-link-line"></i>
+</a>
+</div>
+<!-- Resources -->
+<div class="bg-white dark:bg-gray-900 rounded-lg p-6 custom-shadow hover:shadow-md transition group">
+<div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4 group-hover:bg-primary/20 transition">
+<i class="ri-book-open-line text-primary ri-lg"></i>
+</div>
+<h4 class="text-lg font-semibold text-black dark:text-white mb-3">Preparation Resources</h4>
+<p class="text-gray-600 dark:text-gray-300 mb-4">Comprehensive study materials, practice problems, and interview preparation guides for various roles.</p>
+<a href="https://drive.google.com/drive/folders/1mrAamEIaywvB2Y4L4f1-PugDWsaKa5WM" target="_blank" class="inline-flex items-center text-primary hover:text-primary/80 transition">
+<span class="mr-2">Access Resources</span>
+<i class="ri-external-link-line"></i>
+</a>
+</div>
+<!-- Resumes -->
+<div class="bg-white dark:bg-gray-900 rounded-lg p-6 custom-shadow hover:shadow-md transition group">
+<div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4 group-hover:bg-primary/20 transition">
+<i class="ri-file-list-3-line text-primary ri-lg"></i>
+</div>
+<h4 class="text-lg font-semibold text-black dark:text-white mb-3">Sample Resumes</h4>
+<p class="text-gray-600 dark:text-gray-300 mb-4">Collection of successful resume templates and examples for different roles and positions.</p>
+<a href="https://drive.google.com/drive/folders/1-V_02xy2OYvv2oisw0bTuc2fDcN1mrIj?usp=sharing" target="_blank" class="inline-flex items-center text-primary hover:text-primary/80 transition">
+<span class="mr-2">View Resumes</span>
+<i class="ri-external-link-line"></i>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+   
+
+<section id="itp" class="bg-gray-50 dark:bg-gray-900 py-16 relative">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- Header -->
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold text-black dark:text-white mb-3">The More You Know</h2>
+      <p class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+        Discover insightful blogs tailored to your dream roles
+      </p>
+    </div>
+
+    <!-- Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <!-- Blog Card -->
+       <!--TMYK-8-->
+     
+<div class="group relative transition-all duration-300 ease-in-out max-h-[240px] overflow-hidden hover:max-h-[1000px] transform hover:scale-[1.03] hover:z-10 bg-white dark:bg-gray-900 rounded-lg shadow-md">
+  <div class="relative p-6 z-10 h-full flex flex-col justify-between">
+    <div>
+        <div class="flex items-center gap-4 mb-4">
+          <img src="https://miro.medium.com/v2/resize:fit:1100/format:webp/0*RiAZ7IWfSWM7cguo" alt="Abhijit Singh Johwari"
+            class="w-12 h-12 rounded-full object-cover border-2 border-primary shadow" />
+          <div>
+            <h3 class="text-xl font-bold text-black dark:text-white leading-tight">Abhijit Singh Johwari</h3>
+            <p class="text-sm text-gray-500 dark:text-gray-400 mt-0.5">Y22 ME · Deutsche Bank</p>
+          </div>
+        </div>
+
+        <p class="text-gray-700 dark:text-gray-300 text-sm line-clamp-2 group-hover:line-clamp-none transition-all">
+          Hello people! I am a Junior undergrad at IIT Kanpur. I successfully infiltrated a banking MNC and I am here to tell you how you can too! Meri hobbies Writing, playing pickleball and digressing conversations hai. Aaram se, kya matlab “Jaldi point pe aa na bhai“? I am currently doing an internship with Deutsche Bank, working on Sanctions and Embargoes in the Anti-Financial Crimes department specifically for Strategic List Management (Excel bharta hu bhai). Kya? Branch nahi batai maine? Mechanical hai bhai.So without further ado, Here are the things that you will find in this white page,
+        </p>
+      </div>
+
+      <div class="mt-4">
+        <a href="https://medium.com/@ug_anc/the-more-you-know-8-software-732291aa0e01" target="_blank"
+          class="inline-block mt-2 text-sm font-medium text-primary hover:underline">
+          Read More →
+        </a>
+      </div>
+    </div>
+  </div>
+
+<!--TMYK7-->
+
+
+  <div class="group relative transition-all duration-300 ease-in-out max-h-[240px] overflow-hidden hover:max-h-[1000px] transform hover:scale-[1.03] hover:z-10 bg-white dark:bg-gray-900 rounded-lg shadow-md">
+  <div class="relative p-6 z-10 h-full flex flex-col justify-between">
+
+      <div>
+        
+        <div class="flex items-center gap-4 mb-4">
+          <img src="https://miro.medium.com/v2/format:webp/0*azPu7wVAMkWqTr12" alt="Saksham Parihar"
+            class="w-12 h-12 rounded-full object-cover border-2 border-primary shadow" />
+          <div>
+            <h3 class="text-xl font-bold text-black dark:text-white leading-tight">Saksham Parihar</h3>
+            <p class="text-sm text-gray-500 dark:text-gray-400 mt-0.5">Y22 EE · CPM Analyst Intern</p>
+          </div>
+        </div>
+
+        <p class="text-gray-700 dark:text-gray-300 text-sm line-clamp-2 group-hover:line-clamp-none transition-all">
+          Hello everyone, I am Saksham Parihar, from the Electrical Engineering department. This summer, I am working as a CPM Analyst intern at Standard Chartered.
+
+I will be sharing my intern season journey. I hope this encourages some of you who might be doubting yourselves right now — thinking you don’t have enough projects or that your CPI isn’t good enough. Just remember: the key is to keep going, keep pushing, and trust that you’ll eventually get what you’re aiming for.
+My Internship Journey: Embracing Persistence, Overcoming Rejections and Finding Gratitude
+        </p>
+      </div>
+
+      <div class="mt-4">
+        <a href="https://medium.com/@ug_anc/the-more-you-know-7-analyst-f347432687e2" target="_blank"
+          class="inline-block mt-2 text-sm font-medium text-primary hover:underline">
+          Read More →
+        </a>
+      </div>
+    </div>
+  </div>
+
+<!--TMYK6-->
+ <div class="group relative transition-all duration-300 ease-in-out max-h-[240px] overflow-hidden hover:max-h-[1000px] transform hover:scale-[1.03] hover:z-10 bg-white dark:bg-gray-900 rounded-lg shadow-md">
+  <div class="relative p-6 z-10 h-full flex flex-col justify-between">
+
+      <div>
+        
+        <div class="flex items-center gap-4 mb-4">
+          <img src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*B-sTXfzx3BkpyCpva34NgQ.jpeg" alt="Ayush Bokad"
+            class="w-12 h-12 rounded-full object-cover border-2 border-primary shadow" />
+          <div>
+            <h3 class="text-xl font-bold text-black dark:text-white leading-tight">Ayush Bokad</h3>
+            <p class="text-sm text-gray-500 dark:text-gray-400 mt-0.5">Y22 CHE · Nestle</p>
+          </div>
+        </div>
+
+        <p class="text-gray-700 dark:text-gray-300 text-sm line-clamp-2 group-hover:line-clamp-none transition-all">
+          Hello everyone, I am Ayush Bokad, Y22 pursuing B.Tech in Chemical Engineering; currently interning at Nestle as Operations Management Trainee. In this blog, I’ve shared my internship preparation journey, my experience during the intern season, insights into techno-managerial roles, and key takeaways. Do give it a read — I hope it helps!
+My Preparation Journey
+
+My internship preparation started in a very uncertain phase. Although I did my main preparation for Intern season in summers after 2nd year, I started connecting the threads a bit earlier. In my 2nd year, along with academics
+        </p>
+      </div>
+
+      <div class="mt-4">
+        <a href="https://medium.com/@ug_anc/the-more-you-know-6-technomanagerial-7c1ae20bd911" target="_blank"
+          class="inline-block mt-2 text-sm font-medium text-primary hover:underline">
+          Read More →
+        </a>
+      </div>
+    </div>
+  
+</div>
+
+ <!--TMYK-5-->
+
+
+ <div class="group relative transition-all duration-300 ease-in-out max-h-[240px] overflow-hidden hover:max-h-[1000px] transform hover:scale-[1.03] hover:z-10 bg-white dark:bg-gray-900 rounded-lg shadow-md">
+  <div class="relative p-6 z-10 h-full flex flex-col justify-between">
+    
+      <div>
+        
+        <div class="flex items-center gap-4 mb-4">
+          <img src="https://miro.medium.com/v2/resize:fit:1100/format:webp/0*eo8894CeCd-HwIfE" alt="Madhav Maheshwari"
+            class="w-12 h-12 rounded-full object-cover border-2 border-primary shadow" />
+          <div>
+            <h3 class="text-xl font-bold text-black dark:text-white leading-tight">Madhav Maheshwari</h3>
+            <p class="text-sm text-gray-500 dark:text-gray-400 mt-0.5">Y22 ECO · Nomura</p>
+          </div>
+        </div>
+
+        <p class="text-gray-700 dark:text-gray-300 text-sm line-clamp-2 group-hover:line-clamp-none transition-all">
+          Hi everyone! I’m Madhav Maheshwari, an undergraduate in the Department of Economic Sciences. This summer, I’m interning as a Global Market Analyst at Nomura.
+This post isn’t just about how I landed an internship — it’s about navigating uncertainty, figuring out what works for you, and staying hopeful even when things don’t go as planned.
+
+Coming from the Economics department, it’s easy to feel sidelined in conversations often dominated by software, core engineering, or consulting roles. But that doesn’t mean our journey is any less meaningful. 
+        </p>
+      </div>
+
+      <div class="mt-4">
+        <a href="https://medium.com/@ug_anc/the-more-you-know-5-finance-15e2d41334fc" target="_blank"
+          class="inline-block mt-2 text-sm font-medium text-primary hover:underline">
+          Read More →
+        </a>
+      </div>
+  </div>
+</div>
+<!--TMYK4-->
+
+<div class="group relative transition-all duration-300 ease-in-out max-h-[240px] overflow-hidden hover:max-h-[1000px] transform hover:scale-[1.03] hover:z-10 bg-white dark:bg-gray-900 rounded-lg shadow-md">
+  <div class="relative p-6 z-10 h-full flex flex-col justify-between">
+    
+      <div>
+        
+        
+        <div class="flex items-center gap-4 mb-4">
+          <img src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*DoyQdWYF5s6OkYi7vJIJcw.png" alt="Saksham Parihar"
+            class="w-12 h-12 rounded-full object-cover border-2 border-primary shadow" />
+          <div>
+            <h3 class="text-xl font-bold text-black dark:text-white leading-tight">Moni Dutt</h3>
+            <p class="text-sm text-gray-500 dark:text-gray-400 mt-0.5">Y22 CHE · JP Morgan & Chase</p>
+          </div>
+        </div>
+
+        <p class="text-gray-700 dark:text-gray-300 text-sm line-clamp-2 group-hover:line-clamp-none transition-all">
+          Hello everyone , I’m Moni Dutt, majoring in chemical engineering. I’m working as CIB summer intern in JP Morgan Chase & Co. this year. My domain of interest includes Finance, consulting , product management.
+
+I’m not so sure what I’m going to write in this “intern prep” blog as I didn’t have that much of a defined internship preparation journey honestly but I’ll try to share my true experiences with you all.
+
+I hope my story will give hope to people with not so good CPI and a non-circuital branch as initially I thought this will be a great barrier which indeed is very true, but trust me other things matter as well.
+        </p>
+      </div>
+
+      <div class="mt-4">
+        <a href="https://medium.com/@ug_anc/the-more-you-know-4-finance-6e5cbf2d9ed3" target="_blank"
+          class="inline-block mt-2 text-sm font-medium text-primary hover:underline">
+          Read More →
+        </a>
+      </div>
+    </div>
+
+</div>
+
+<!--TMYK3-->
+ 
+<div class="group relative transition-all duration-300 ease-in-out max-h-[240px] overflow-hidden hover:max-h-[1000px] transform hover:scale-[1.03] hover:z-10 bg-white dark:bg-gray-900 rounded-lg shadow-md">
+  <div class="relative p-6 z-10 h-full flex flex-col justify-between">
+    
+      <div>
+        
+        <div class="flex items-center gap-4 mb-4">
+          <img src="https://miro.medium.com/v2/resize:fit:4800/format:webp/1*k_1UXR-7_3du7QVqqVEvmg.png" alt="Akshat Chouksey"
+            class="w-12 h-12 rounded-full object-cover border-2 border-primary shadow" />
+          <div>
+            <h3 class="text-xl font-bold text-black dark:text-white leading-tight">Akshat Chouksey</h3>
+            <p class="text-sm text-gray-500 dark:text-gray-400 mt-0.5">Y22 EE · PwC</p>
+          </div>
+        </div>
+
+        <p class="text-gray-700 dark:text-gray-300 text-sm line-clamp-2 group-hover:line-clamp-none transition-all">
+          Hi Everyone, I’m Akshat Chouksey (Y22), from the Electrical Engineering department, currently interning at PwC as a Technology Consulting Associate. In this blog, I’ll walk you through all the mistakes I made during my internship hunt and how I eventually managed to land an offer despite them.
+Zoom image will be displayed
+Intern Interview Process & Learning
+
+To provide some context, I held several PORs during my 2nd year, including serving as the Secretary of the Finance and Analytics Club, E-cell along with a few other small PoRs. In my second year, I co-founded Suidhaga, a merchandise brand
+        </p>
+      </div>
+
+      <div class="mt-4">
+        <a href="https://medium.com/@ug_anc/the-more-you-know-consult-1-35baf9ae6d34" target="_blank"
+          class="inline-block mt-2 text-sm font-medium text-primary hover:underline">
+          Read More →
+        </a>
+      </div>
+    </div>
+  </div>
+  <!--TMKY2-->
+ <div class="group w-full max-w-md relative transition-all duration-300 ease-in-out max-h-[240px] overflow-hidden hover:max-h-[1000px] transform hover:scale-[1.03] hover:z-10 bg-white dark:bg-gray-900 rounded-lg shadow-md">
+    <div class="relative p-6 z-10 h-full flex flex-col justify-between">
+      <div>
+        <div class="flex items-center gap-4 mb-4">
+          <img src="https://miro.medium.com/v2/resize:fit:1100/format:webp/0*haDnExEGXYZ5VzGD" alt="Debraj Karmakar"
+            class="w-12 h-12 rounded-full object-cover border-2 border-primary shadow" />
+          <div>
+            <h3 class="text-xl font-bold text-black dark:text-white leading-tight">Debraj Karmakar</h3>
+            <p class="text-sm text-gray-500 dark:text-gray-400 mt-0.5">Y22 CSE · Graviton</p>
+          </div>
+        </div>
+        <p class="text-gray-700 dark:text-gray-300 text-sm line-clamp-2 group-hover:line-clamp-none transition-all">
+          I am Debraj Karmakar, final-year undergraduate student pursuing B.Tech in Computer Science and Engineering at IIT Kanpur. My interest lies in theoretical computer science and quantum computing. Last summer I completed my research internship at Centre for Quantum Technologies (CQT), National University of Singapore (NUS) and currently, I am a quantitative research intern at Graviton Research Capital. This blog will give you an overview of how I prepared for the quant internship: the resources I used, the habits I built and the lessons I learned along the way. I hope my journey gives you a roadmap for your internship preparation.
+        </p>
+      </div>
+      <div class="mt-4">
+        <a href="https://medium.com/@ug_anc/the-more-you-know-2-quant-116da729e05e" target="_blank"
+          class="inline-block mt-2 text-sm font-medium text-primary hover:underline">
+          Read More →
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- TMKC-1-->
+  <div class="group w-full max-w-md relative transition-all duration-300 ease-in-out max-h-[240px] overflow-hidden hover:max-h-[1000px] transform hover:scale-[1.03] hover:z-10 bg-white dark:bg-gray-900 rounded-lg shadow-md">
+    <div class="relative p-6 z-10 h-full flex flex-col justify-between">
+      <div>
+        <div class="flex items-center gap-4 mb-4">
+          <img src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*nL9AFWjibdo96wbMUcjg7g.jpeg" alt="Kaushal Jain"
+            class="w-12 h-12 rounded-full object-cover border-2 border-primary shadow" />
+          <div>
+            <h3 class="text-xl font-bold text-black dark:text-white leading-tight">Kaushal Jain</h3>
+            <p class="text-sm text-gray-500 dark:text-gray-400 mt-0.5">Y22 MTH · Oracle</p>
+          </div>
+        </div>
+        <p class="text-gray-700 dark:text-gray-300 text-sm line-clamp-2 group-hover:line-clamp-none transition-all">
+          I am Kaushal Jain, pursuing my B.S in Mathematics and Scientific Computing, and currently doing a software development intern at Oracle. My domain of interest includes SDE and Consulting. You can find an overview of my internship journey and if you are reading it I hope it could help you in some means. Pre-Summers — If I talk about my first 2 years in college, I have not been involved in any SnT Clubs or teams. Neither have I done any significant stuff related to interns. I had a CPI > 8 at the end of 3rd semester.
+        </p>
+      </div>
+      <div class="mt-4">
+        <a href="https://medium.com/@ug_anc/the-more-you-know-1-sde-4ed28096d2c3" target="_blank"
+          class="inline-block mt-2 text-sm font-medium text-primary hover:underline">
+          Read More →
+        </a>
+      </div>
+    </div>
+  </div>
+<!--Y21-->
+     <!--TMYK-7-->
+     
+<div class="group relative transition-all duration-300 ease-in-out max-h-[240px] overflow-hidden hover:max-h-[1000px] transform hover:scale-[1.03] hover:z-10 bg-white dark:bg-gray-900 rounded-lg shadow-md">
+  <div class="relative p-6 z-10 h-full flex flex-col justify-between">
+    <div>
+        <div class="flex items-center gap-4 mb-4">
+          <img src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*Bl2obnu31gVl50fkewVy8w.jpeg" alt="Saumya Gupta"
+            class="w-12 h-12 rounded-full object-cover border-2 border-primary shadow" />
+          <div>
+            <h3 class="text-xl font-bold text-black dark:text-white leading-tight">Saumya Gupta</h3>
+            <p class="text-sm text-gray-500 dark:text-gray-400 mt-0.5">Y21 CHE · American Express</p>
+          </div>
+        </div>
+
+        <p class="text-gray-700 dark:text-gray-300 text-sm line-clamp-2 group-hover:line-clamp-none transition-all">
+          Hello reader!I am Saumya Gupta, pursuing my B.Tech in CHE and currently doing a data analyst intern at American Express.
+
+I am going to tell you my journey of grabbing an internship offer in American Express. It will be a sweet 5 to 6 min read, written with the hope to provide you light when you are filled with darkness. I wish that it can help you in any way possible.
+
+Background:
+
+So, let me start from the very beginning and provide you with my background. I am a student in the Chemical Engineering department and I joined with one aspiration, which was to explore everything.
+        </p>
+      </div>
+
+      <div class="mt-4">
+        <a href="https://medium.com/@ug_anc/the-more-you-know-7-analytics-b5c2938559ff" target="_blank"
+          class="inline-block mt-2 text-sm font-medium text-primary hover:underline">
+          Read More →
+        </a>
+      </div>
+    </div>
+  </div>
+
+<!--TMYK6-->
+
+
+  <div class="group relative transition-all duration-300 ease-in-out max-h-[240px] overflow-hidden hover:max-h-[1000px] transform hover:scale-[1.03] hover:z-10 bg-white dark:bg-gray-900 rounded-lg shadow-md">
+  <div class="relative p-6 z-10 h-full flex flex-col justify-between">
+
+      <div>
+        
+        <div class="flex items-center gap-4 mb-4">
+          <img src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*Wb-bLQis9TXMWBjverV_bA.jpeg" alt="Pranjal Singh"
+            class="w-12 h-12 rounded-full object-cover border-2 border-primary shadow" />
+          <div>
+            <h3 class="text-xl font-bold text-black dark:text-white leading-tight">Pranjal Singh</h3>
+            <p class="text-sm text-gray-500 dark:text-gray-400 mt-0.5">Y21 CHE · Dr. Reddy</p>
+          </div>
+        </div>
+
+        <p class="text-gray-700 dark:text-gray-300 text-sm line-clamp-2 group-hover:line-clamp-none transition-all">
+          Hey everyone, I am Pranjal Singh, a Y21 undergraduate in the department of chemical engineering. I will be interning at Dr. Reddy’s Laboratory in the core profile this summer. I will be sharing my preparation journey and interview experience here.
+
+To begin with, I would like to share about myself, after joining the institute, I explored a bit of things, I did a SnT summer project in the field of game development, which was a good learning and experience, but I realized that it required a lot of graphic creativity and patience since it is an iterative process. I also did projects in ML and deep learning offered by the chemineers society. 
+        </p>
+      </div>
+
+      <div class="mt-4">
+        <a href="https://medium.com/@ug_anc/the-more-you-know-6-core-d8701604e530" target="_blank"
+          class="inline-block mt-2 text-sm font-medium text-primary hover:underline">
+          Read More →
+        </a>
+      </div>
+    </div>
+  </div>
+
+<!--TMYK5-->
+ <div class="group relative transition-all duration-300 ease-in-out max-h-[240px] overflow-hidden hover:max-h-[1000px] transform hover:scale-[1.03] hover:z-10 bg-white dark:bg-gray-900 rounded-lg shadow-md">
+  <div class="relative p-6 z-10 h-full flex flex-col justify-between">
+
+      <div>
+        
+        <div class="flex items-center gap-4 mb-4">
+          <img src="https://miro.medium.com/v2/resize:fit:828/format:webp/1*lJ5SDPu9cTPvVcLs95hB6A.jpeg" alt="Varun Tokas"
+            class="w-12 h-12 rounded-full object-cover border-2 border-primary shadow" />
+          <div>
+            <h3 class="text-xl font-bold text-black dark:text-white leading-tight">Varun Tokas</h3>
+            <p class="text-sm text-gray-500 dark:text-gray-400 mt-0.5">Y21 CSE · NK Securities</p>
+          </div>
+        </div>
+
+        <p class="text-gray-700 dark:text-gray-300 text-sm line-clamp-2 group-hover:line-clamp-none transition-all">
+          I am Varun Tokas, pursuing my B.Tech in CSE and currently doing a quant research intern at NK Securities Research. My domain of interest includes SDE and Quant . You can find an overview of my internship journey and if you are reading it I hope it could help you in some means.
+
+My Preparation Journey:
+
+I was in a bit of a quandry on how I should prepare for my internships. On one hand I wanted to stay in college, and perhaps do a project in the meantime, while on the other I wanted to go home for the summers, as summers in Kanpur get quite hot, maybe do an online intern somewhere, swim in the afternoons, and prepare in a more relaxed environment. After much deliberation and discussing with seniors, I ultimately decided to go home for the summers.
+        </p>
+      </div>
+
+      <div class="mt-4">
+        <a href="https://medium.com/@ug_anc/the-more-you-know-5-quant-57073be30455" target="_blank"
+          class="inline-block mt-2 text-sm font-medium text-primary hover:underline">
+          Read More →
+        </a>
+      </div>
+    </div>
+  
+</div>
+
+ <!--TMYK-4-->
+
+
+ <div class="group relative transition-all duration-300 ease-in-out max-h-[240px] overflow-hidden hover:max-h-[1000px] transform hover:scale-[1.03] hover:z-10 bg-white dark:bg-gray-900 rounded-lg shadow-md">
+  <div class="relative p-6 z-10 h-full flex flex-col justify-between">
+    
+      <div>
+        
+        <div class="flex items-center gap-4 mb-4">
+          <img src="https://miro.medium.com/v2/resize:fit:828/format:webp/1*ZuYecMsdOc_Bcuu3MV1mVQ.jpeg" alt="Siddhant Singh"
+            class="w-12 h-12 rounded-full object-cover border-2 border-primary shadow" />
+          <div>
+            <h3 class="text-xl font-bold text-black dark:text-white leading-tight">Siddhant Singh</h3>
+            <p class="text-sm text-gray-500 dark:text-gray-400 mt-0.5">Y21 ME · Axxela</p>
+          </div>
+        </div>
+
+        <p class="text-gray-700 dark:text-gray-300 text-sm line-clamp-2 group-hover:line-clamp-none transition-all">
+          Hi everyone! I’m Siddhant Singh, a student in the department of Mechanical Engineering. This summer, I’m working as a Trading Analyst at Axxela.
+
+When the AnC team asked me to share my internship journey, I thought, “Do I really have enough to say?” But after reflecting on my experience, I realized there’s plenty to share — especially for those who might feel that their journey is full of setbacks or isn’t as straightforward as they’d like.
+
+I hope my story gives some encouragement to those who aren’t from the infamous “CEM” branches and to those who might not have stellar academic records. Let’s dive into it.
+
+My Story:-
+
+To start, I’m a Mechanical Engineering student, and while my branch offers plenty of opportunities in core mechanical roles, I was more interested in software, techno-managerial, and finance roles.
+        </p>
+      </div>
+
+      <div class="mt-4">
+        <a href="https://medium.com/@ug_anc/the-more-you-know-4-finance-c593f74a9f46" target="_blank"
+          class="inline-block mt-2 text-sm font-medium text-primary hover:underline">
+          Read More →
+        </a>
+      </div>
+  </div>
+</div>
+<!--TMYK4-->
+
+<div class="group relative transition-all duration-300 ease-in-out max-h-[240px] overflow-hidden hover:max-h-[1000px] transform hover:scale-[1.03] hover:z-10 bg-white dark:bg-gray-900 rounded-lg shadow-md">
+  <div class="relative p-6 z-10 h-full flex flex-col justify-between">
+    
+      <div>
+        
+        
+        <div class="flex items-center gap-4 mb-4">
+          <img src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*CBMVZxZIt5gOyEiof8rmeA.jpeg" alt="Saksham Parihar"
+            class="w-12 h-12 rounded-full object-cover border-2 border-primary shadow" />
+          <div>
+            <h3 class="text-xl font-bold text-black dark:text-white leading-tight">Siddharth Maurya</h3>
+            <p class="text-sm text-gray-500 dark:text-gray-400 mt-0.5">Y21 CHE · Accenture</p>
+          </div>
+        </div>
+
+        <p class="text-gray-700 dark:text-gray-300 text-sm line-clamp-2 group-hover:line-clamp-none transition-all">
+          Hello everyone, I am Siddharth Maurya, a junior undergraduate student at IIT Kanpur majoring in Chemical Engineering. Currently, I am interning as a Strategy and Consulting Associate at Accenture. I have documented my entire intern preparation journey here, including the interview process, and have also provided some tips for intern preparation.Insight into the Selection Process:-
+
+Resume Submission-> Aptitude Test + Resume Shortlist -> Technical Interview → MD Round
+
+Basic Preparation Overview:-
+
+Consulting mainly requires you to practice a few Guesstimates and Case Studies. Resources that are relevant for these are Victor Cheng Playlist, Aditya Agarwal Playlist and IIML Case Interviews
+        </p>
+      </div>
+
+      <div class="mt-4">
+        <a href="https://medium.com/@ug_anc/the-more-you-know-3-consulting-503b2694344c" target="_blank"
+          class="inline-block mt-2 text-sm font-medium text-primary hover:underline">
+          Read More →
+        </a>
+      </div>
+    </div>
+
+</div>
+
+<!--TMYK2-->
+ 
+<div class="group relative transition-all duration-300 ease-in-out max-h-[240px] overflow-hidden hover:max-h-[1000px] transform hover:scale-[1.03] hover:z-10 bg-white dark:bg-gray-900 rounded-lg shadow-md">
+  <div class="relative p-6 z-10 h-full flex flex-col justify-between">
+    
+      <div>
+        
+        <div class="flex items-center gap-4 mb-4">
+          <img src="https://miro.medium.com/v2/resize:fit:750/format:webp/1*EwsO6rB2dXCgBBMSrbe4jg.jpeg" alt="Diptanshu"
+            class="w-12 h-12 rounded-full object-cover border-2 border-primary shadow" />
+          <div>
+            <h3 class="text-xl font-bold text-black dark:text-white leading-tight">Diptanshu</h3>
+            <p class="text-sm text-gray-500 dark:text-gray-400 mt-0.5">Y21 CHE · Hindustan Unilever</p>
+          </div>
+        </div>
+
+        <p class="text-gray-700 dark:text-gray-300 text-sm line-clamp-2 group-hover:line-clamp-none transition-all">
+         I’m Diptansu, a Y21 undergraduate student majoring in Chemical Engineering. This summer, I’ll be interning at Hindustan Unilever as an RnD engineer.
+
+A little about me: Initially admitted to the MSE branch, I switched to Chemical Engineering after my first year. As I began to do well in my core courses, my interest shifted towards TechnoManagerial/Core roles. Alongside my studies, I worked under a professor on a project involving the study and simulation of granular particles. To enhance my skill set, I undertook projects with CHEMINEERS and STAMATICS to learn basic machine learning and completed an online course. Outside of academics, I have a passion for reading fiction, cooking, and wildlife. I’ve also served as the Manager of the Research Wing at the Academics and Career Council, as well as the secretary of the book club.
+        </p>
+      </div>
+
+      <div class="mt-4">
+        <a href="https://medium.com/@ug_anc/the-more-you-know-2-tm-ccc8f19ab42f" target="_blank"
+          class="inline-block mt-2 text-sm font-medium text-primary hover:underline">
+          Read More →
+        </a>
+      </div>
+    </div>
+  </div>
+  <!--TMYK1-->
+ 
+<div class="group relative transition-all duration-300 ease-in-out max-h-[240px] overflow-hidden hover:max-h-[1000px] transform hover:scale-[1.03] hover:z-10 bg-white dark:bg-gray-900 rounded-lg shadow-md">
+  <div class="relative p-6 z-10 h-full flex flex-col justify-between">
+    
+      <div>
+        
+        <div class="flex items-center gap-4 mb-4">
+          <img src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*BSHG4ac_HK74kSsERIAvfg.jpeg" alt="Vishal"
+            class="w-12 h-12 rounded-full object-cover border-2 border-primary shadow" />
+          <div>
+            <h3 class="text-xl font-bold text-black dark:text-white leading-tight">Vishal Himmatsinghka</h3>
+            <p class="text-sm text-gray-500 dark:text-gray-400 mt-0.5">Y21 EE · Atlassian</p>
+          </div>
+        </div>
+
+        <p class="text-gray-700 dark:text-gray-300 text-sm line-clamp-2 group-hover:line-clamp-none transition-all">
+         I am Vishal Himmatsinghka, pursuing my B.Tech in EE and currently doing a software development intern at Atlassian. My domain of interest includes SDE, Quant and Finance. You can find an overview of my internship journey and if you are reading it I hope it could help you in some means.
+Journey:
+
+I began my proper intern preparation in May ’23, knowing it was quite late. I had initially planned to start at the beginning of my 4th semester but got sidetracked by Inter-IIT, FAC Coordinator recruitments, and EE academics. Despite my anxiety about starting late and my lack of prior competitive programming experience, I resolved to make the most of the three months ahead to upskill and cover lost time. I stayed on campus over the summer for discipline, unaware of how challenging the summers would be.
+        </p>
+      </div>
+
+      <div class="mt-4">
+        <a href="https://medium.com/@ug_anc/the-more-you-know-1-sde-8e04336dc07a" target="_blank"
+          class="inline-block mt-2 text-sm font-medium text-primary hover:underline">
+          Read More →
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+</section>
+
+
+
+
+
+  <!-- Collaboration -->
+<section id="collaborations" class="py-10 bg-gray-50 dark:bg-gray950">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold text-black dark:text-white mb-4">Our Collaborations</h2>
+      <p class="text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">Strategic partnerships with industry leaders to provide students with exclusive resources and opportunities.</p>
+    </div>
+
+    <!-- Slider Wrapper -->
+    <div class="relative overflow-hidden">
+      <div id="collab-slider" class="flex transition-transform duration-500">
+
+        <!-- 1. GeeksForGeeks -->
+        <div class="min-w-full">
+          <div class="bg-gradient-to-r from-primary/5 to-primary/10 dark:from-primary/10 dark:to-primary/20 rounded-lg p-8 mb-16">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <div class="flex items-center mb-6">
+                  <div class="w-12 h-12 flex items-center justify-center mr-4">
+                    <i class="ri-code-box-line text-primary ri-2x"></i>
+                  </div>
+                  <h3 class="text-2xl font-semibold text-black dark:text-white">GeeksForGeeks Partnership</h3>
+                </div>
+                <p class="text-gray-600 dark:text-gray-300 mb-6">
+                  The Career Development Wing has established a strategic collaboration with GeeksForGeeks, one of India's leading platforms for computer science education.This partnership provides IIT Kanpur students with exclusive access to premium learning resources, coding competitions, and placement preparation materials.
+                </p>
+                <div class="space-y-4 mb-6">
+                  <div class="flex items-start">
+                    <div class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center mt-1 flex-shrink-0">
+                      <i class="ri-check-line text-primary"></i>
+                    </div>
+                    <p class="ml-3 text-gray-600 dark:text-gray-300">Subsidized access to GeeksForGeeks Premium courses</p>
+                  </div>
+                  <div class="flex items-start">
+                    <div class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center mt-1 flex-shrink-0">
+                      <i class="ri-check-line text-primary"></i>
+                    </div>
+                    <p class="ml-3 text-gray-600 dark:text-gray-300">Exclusive webinars and workshops by industry experts</p>
+                  </div>
+                  <div class="flex items-start">
+                    <div class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center mt-1 flex-shrink-0">
+                      <i class="ri-check-line text-primary"></i>
+                    </div>
+                    <p class="ml-3 text-gray-600 dark:text-gray-300">Special coding competitions for IIT Kanpur students</p>
+                  </div>
+                  <div class="flex items-start">
+                    <div class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center mt-1 flex-shrink-0">
+                      <i class="ri-check-line text-primary"></i>
+                    </div>
+                    <p class="ml-3 text-gray-600 dark:text-gray-300">Mentorship opportunities with GeeksForGeeks experts</p>
+                  </div>
+                </div>
+              </div>
+              <div class="rounded-lg overflow-hidden">
+                <img src="https://readdy.ai/api/search-image?query=coding%20workshop%2C%20students%20learning%20programming%2C%20professional%20IT%20training%2C%20computer%20science%20education%2C%20modern%20classroom%20with%20computers%2C%20technical%20learning%20environment%2C%20high%20quality&width=600&height=400&seq=5&orientation=landscape" alt="GeeksForGeeks Partnership" class="w-full h-full object-cover object-top">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. InterviewBuddy -->
+        <div class="min-w-full">
+          <div class="bg-gradient-to-r from-primary/5 to-primary/10 dark:from-primary/10 dark:to-primary/20 rounded-lg p-8 mb-16">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <div class="flex items-center mb-6">
+                  <div class="w-12 h-12 flex items-center justify-center mr-4">
+                    <i class="ri-code-box-line text-primary ri-2x"></i>
+                  </div>
+                  <h3 class="text-2xl font-semibold text-black dark:text-white">InterviewBuddy Partnership</h3>
+                </div>
+                <p class="text-gray-600 dark:text-gray-300 mb-6">
+                  The Career Development Wing has collaborated with InterviewBuddy, a leading platform for mock interviews and personalized feedback. This partnership helps IIT Kanpur students refine their communication, problem-solving, and interview skills through realistic practice sessions with industry professionals.
+                </p>
+                <div class="space-y-4 mb-6">
+                  <div class="flex items-start">
+                    <div class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center mt-1 flex-shrink-0">
+                      <i class="ri-check-line text-primary"></i>
+                    </div>
+                    <p class="ml-3 text-gray-600 dark:text-gray-300">Personalized mock interviews with experts from top companies</p>
+                  </div>
+                  <div class="flex items-start">
+                    <div class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center mt-1 flex-shrink-0">
+                      <i class="ri-check-line text-primary"></i>
+                    </div>
+                    <p class="ml-3 text-gray-600 dark:text-gray-300">Detailed performance feedback and improvement plans</p>
+                  </div>
+                  <div class="flex items-start">
+                    <div class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center mt-1 flex-shrink-0">
+                      <i class="ri-check-line text-primary"></i>
+                    </div>
+                    <p class="ml-3 text-gray-600 dark:text-gray-300">Domain-specific interview practice for technical and HR rounds</p>
+                  </div>
+                  <div class="flex items-start">
+                    <div class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center mt-1 flex-shrink-0">
+                      <i class="ri-check-line text-primary"></i>
+                    </div>
+                    <p class="ml-3 text-gray-600 dark:text-gray-300">Exclusive discounts for IIT Kanpur students</p>
+                  </div>
+                </div>
+               </div>
+              <div class="rounded-lg overflow-hidden">
+                <img src="https://bettsrecruiting.com/wp-content/uploads/2021/05/christina-wocintechchat-com-LQ1t-8Ms5PY-unsplash-scaled.jpg" alt="GeeksForGeeks Partnership" class="w-full h-full object-cover object-top">
+              </div>
+            </div>
+          </div>
+        </div>
+    <!-- Career Launcher-->
+<div class="min-w-full">
+          <div class="bg-gradient-to-r from-primary/5 to-primary/10 dark:from-primary/10 dark:to-primary/20 rounded-lg p-8 mb-16">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <div class="flex items-center mb-6">
+                  <div class="w-12 h-12 flex items-center justify-center mr-4">
+                    <i class="ri-code-box-line text-primary ri-2x"></i>
+                  </div>
+                  <h3 class="text-2xl font-semibold text-black dark:text-white">Career Launcher Partnership</h3>
+                </div>
+                <p class="text-gray-600 dark:text-gray-300 mb-6">
+                  The Career Development Wing has teamed up with Career Launcher, a renowned institute for aptitude training, competitive exams, and career guidance. This collaboration empowers IIT Kanpur students with resources to excel in placements and higher studies entrance exams.
+                </p>
+                <div class="space-y-4 mb-6">
+                  <div class="flex items-start">
+                    <div class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center mt-1 flex-shrink-0">
+                      <i class="ri-check-line text-primary"></i>
+                    </div>
+                    <p class="ml-3 text-gray-600 dark:text-gray-300">Specialized training programs for campus recruitment tests</p>
+                  </div>
+                  <div class="flex items-start">
+                    <div class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center mt-1 flex-shrink-0">
+                      <i class="ri-check-line text-primary"></i>
+                    </div>
+                    <p class="ml-3 text-gray-600 dark:text-gray-300">Exclusive workshops on aptitude, reasoning, and verbal ability</p>
+                  </div>
+                  <div class="flex items-start">
+                    <div class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center mt-1 flex-shrink-0">
+                      <i class="ri-check-line text-primary"></i>
+                    </div>
+                    <p class="ml-3 text-gray-600 dark:text-gray-300">Preparation modules for CAT, GRE, and other competitive exams</p>
+                  </div>
+                  <div class="flex items-start">
+                    <div class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center mt-1 flex-shrink-0">
+                      <i class="ri-check-line text-primary"></i>
+                    </div>
+                    <p class="ml-3 text-gray-600 dark:text-gray-300">Discounted access to premium study materials for IIT Kanpur students</p>
+                  </div>
+                </div>
+               </div>
+              <div class="rounded-lg overflow-hidden">
+                <img src="data:image/jpeg;base64,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" alt="GeeksForGeeks Partnership" class="w-full h-full object-cover object-top">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--Cantilever Labs-->
+       <div class="min-w-full">
+          <div class="bg-gradient-to-r from-primary/5 to-primary/10 dark:from-primary/10 dark:to-primary/20 rounded-lg p-8 mb-16">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <div class="flex items-center mb-6">
+                  <div class="w-12 h-12 flex items-center justify-center mr-4">
+                    <i class="ri-code-box-line text-primary ri-2x"></i>
+                  </div>
+                  <h3 class="text-2xl font-semibold text-black dark:text-white">Cantilever Labs Partnership</h3>
+                </div>
+                <p class="text-gray-600 dark:text-gray-300 mb-6">
+                  The Career Development Wing has joined hands with Cantilever Labs, a platform specializing in employability skills and job-readiness training. This partnership bridges the gap between academics and industry requirements for IIT Kanpur students.
+                </p>
+                <div class="space-y-4 mb-6">
+                  <div class="flex items-start">
+                    <div class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center mt-1 flex-shrink-0">
+                      <i class="ri-check-line text-primary"></i>
+                    </div>
+                    <p class="ml-3 text-gray-600 dark:text-gray-300">Industry-oriented training programs on emerging technologies</p>
+                  </div>
+                  <div class="flex items-start">
+                    <div class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center mt-1 flex-shrink-0">
+                      <i class="ri-check-line text-primary"></i>
+                    </div>
+                    <p class="ml-3 text-gray-600 dark:text-gray-300">Soft skills and communication workshops tailored for placements</p>
+                  </div>
+                  <div class="flex items-start">
+                    <div class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center mt-1 flex-shrink-0">
+                      <i class="ri-check-line text-primary"></i>
+                    </div>
+                    <p class="ml-3 text-gray-600 dark:text-gray-300">Corporate exposure sessions with hiring managers and professionals</p>
+                  </div>
+                  <div class="flex items-start">
+                    <div class="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center mt-1 flex-shrink-0">
+                      <i class="ri-check-line text-primary"></i>
+                    </div>
+                    <p class="ml-3 text-gray-600 dark:text-gray-300">Exclusive projects and case studies to enhance practical learning</p>
+                  </div>
+                </div>
+               </div>
+              <div class="rounded-lg overflow-hidden">
+                <img src="https://images.stockcake.com/public/9/9/2/992a5a2b-45f8-40a9-b1e1-8879c4a44690_large/corporate-training-session-stockcake.jpg" alt="GeeksForGeeks Partnership" class="w-full h-full object-cover object-top">
+              </div>
+            </div>
+          </div>
+        </div>
+  
+  </div>
+
+      <!-- Navigation Buttons -->
+      <button id="prevBtn" class="absolute top-1/2 -translate-y-1/2 left-2 bg-primary text-white p-2 rounded-full shadow-md hover:bg-primary/90">
+        <i class="ri-arrow-left-s-line text-2xl"></i>
+      </button>
+      <button id="nextBtn" class="absolute top-1/2 -translate-y-1/2 right-2 bg-primary text-white p-2 rounded-full shadow-md hover:bg-primary/90">
+        <i class="ri-arrow-right-s-line text-2xl"></i>
+      </button>
+    </div>
+  </div>
+</section>
+
+<script>
+  const slider = document.getElementById('collab-slider');
+  const slides = document.querySelectorAll('#collab-slider > div');
+  let index = 0;
+  document.getElementById('nextBtn').onclick = () => {
+    index = (index + 1) % slides.length;
+    slider.style.transform = `translateX(-${index * 100}%)`;
+  };
+  document.getElementById('prevBtn').onclick = () => {
+    index = (index - 1 + slides.length) % slides.length;
+    slider.style.transform = `translateX(-${index * 100}%)`;
+  };
+</script>
+<!--
+
+ <section id="resources">
+<div class="mb-16">
+<h3 class="text-2xl font-semibold text-black dark:text-white mb-8 text-center">How to Access GeeksForGeeks Resources</h3>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+<div class="bg-white dark:bg-gray-900 rounded-lg p-6 custom-shadow hover:shadow-md transition">
+<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center mb-4">
+<span class="text-white font-bold">1</span>
+</div>
+<h4 class="text-lg font-semibold text-black dark:text-white mb-3">Register with Institute Email</h4>
+<p class="text-gray-600 dark:text-gray-300">Use your official IIT Kanpur email ID to register on the GeeksForGeeks portal through the special link provided by CDev.</p>
+</div>
+=
+<div class="bg-white dark:bg-gray-900 rounded-lg p-6 custom-shadow hover:shadow-md transition">
+<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center mb-4">
+<span class="text-white font-bold">2</span>
+</div>
+<h4 class="text-lg font-semibold text-black dark:text-white mb-3">Verify Your Enrollment</h4>
+<p class="text-gray-600 dark:text-gray-300">Complete the verification process by providing your roll number and department details.</p>
+</div>
+
+<div class="bg-white dark:bg-gray-900 rounded-lg p-6 custom-shadow hover:shadow-md transition">
+<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center mb-4">
+<span class="text-white font-bold">3</span>
+</div>
+<h4 class="text-lg font-semibold text-black dark:text-white mb-3">Access Premium Content</h4>
+<p class="text-gray-600 dark:text-gray-300">Once verified, you'll gain immediate access to all premium resources and features offered under the collaboration.</p>
+</div>
+</div>
+</div>
+</section>
+</section>
+-->
+<!-- Contact Section -->
+<section id="contact" class="pb-16 bg-gray-50 dark:bg-gray-900">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-12">
+<h2 class="text-3xl font-bold text-black dark:text-white mb-4">Contact Us</h2>
+<p class="text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">Have questions or suggestions? Reach out to our team and we'll get back to you as soon as possible.</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+<!-- Contact Form -->
+<div class="bg-white dark:bg-gray-900 rounded-lg p-8 custom-shadow">
+<h3 class="text-2xl font-semibold text-black dark:text-white mb-6">Send us a message</h3>
+<form>
+<div class="mb-6">
+<label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Your Name</label>
+<input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary bg-white dark:bg-gray-950 text-black dark:text-white" placeholder="Enter your name">
+</div>
+<div class="mb-6">
+<label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Email Address</label>
+<input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary bg-white dark:bg-gray-950 text-black dark:text-white" placeholder="Enter your email">
+</div>
+<div class="mb-6">
+<label for="subject" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Subject</label>
+<div class="relative">
+<select id="subject" class="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded appearance-none focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary pr-8 bg-white dark:bg-gray-950 text-black dark:text-white">
+
+<option value="">Select a subject</option>
+<option value="general">General Inquiry</option>
+<option value="itp">Internship Training Program</option>
+<option value="collaboration">Collaboration Opportunities</option>
+<option value="feedback">Feedback</option>
+</select>
+<div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
+<i class="ri-arrow-down-s-line text-gray-400 dark:text-gray-300"></i>
+</div>
+</div>
+</div>
+<div class="mb-6">
+<label for="message" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Message</label>
+<textarea id="message" rows="5" class="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded resize-none focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary bg-white dark:bg-gray-950 text-black dark:text-white" placeholder="Enter your message"></textarea>
+</div>
+<button type="submit" class="bg-primary text-white px-6 py-3 rounded-button font-medium hover:bg-primary/90 transition whitespace-nowrap">Send Message</button>
+</form>
+</div>
+<!-- Team Managers -->
+<div>
+<h3 class="text-2xl font-semibold text-black dark:text-white mb-6">Our Team Managers</h3>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+<!-- Manager 1 -->
+<div class="bg-white dark:bg-gray-900 rounded-lg p-6 custom-shadow hover:shadow-md transition">
+<div class="w-16 h-16 bg-gray-200 dark:bg-gray-700 rounded-full mb-4 overflow-hidden">
+<div class="w-full h-full flex items-center justify-center bg-primary/10 text-primary">
+<img src="/CareerWing/Aayush.jpg">
+</div>
+</div>
+<h4 class="text-lg font-semibold text-black dark:text-white mb-1">Aayush Kumar</h4>
+<p class="text-gray-600 dark:text-gray-300 text-sm mb-3">Manager, Career Development Wing</p>
+<div class="flex items-center text-sm text-gray-500 dark:text-gray-400 mb-2">
+<i class="ri-mail-line mr-2"></i>
+<a href="mailto:aayushk23@iitk.ac.in" class="hover:text-primary">aayushk23@iitk.ac.in</a>
+</div>
+<div class="flex items-center text-sm text-gray-500 dark:text-gray-400">
+<i class="ri-linkedin-box-line mr-2"></i>
+<a href="https://www.linkedin.com/in/aayush-kumar-18a69b289/?originalSubdomain=in" class="hover:text-primary">LinkedIn Profile</a>
+</div>
+</div>
+<!-- Manager 2 -->
+<div class="bg-white dark:bg-gray-900 rounded-lg p-6 custom-shadow hover:shadow-md transition">
+<div class="w-16 h-16 bg-gray-200 dark:bg-gray-700 rounded-full mb-4 overflow-hidden">
+<div class="w-full h-full flex items-center justify-center bg-primary/10 text-primary">
+<img src="/CareerWing/Karmanya Goyal.jpeg">
+</div>
+</div>
+<h4 class="text-lg font-semibold text-black dark:text-white mb-1">Karmanya Goyal</h4>
+<p class="text-gray-600 dark:text-gray-300 text-sm mb-3">Manager, Career Development Wing</p>
+<div class="flex items-center text-sm text-gray-500 dark:text-gray-400 mb-2">
+<i class="ri-mail-line mr-2"></i>
+<a href="mailto:karmanya23@iitk.ac.in" class="hover:text-primary">karmanya23@iitk.ac.in</a>
+</div>
+<div class="flex items-center text-sm text-gray-500 dark:text-gray-400">
+<i class="ri-linkedin-box-line mr-2"></i>
+<a href="https://www.linkedin.com/in/karmanya-goyal-333b5b1aa/?originalSubdomain=in" class="hover:text-primary">LinkedIn Profile</a>
+</div>
+</div>
+<!-- Manager 3 -->
+<div class="bg-white dark:bg-gray-900 rounded-lg p-6 custom-shadow hover:shadow-md transition">
+<div class="w-16 h-16 bg-gray-200 dark:bg-gray-700 rounded-full mb-4 overflow-hidden">
+<div class="w-full h-full flex items-center justify-center bg-primary/10 text-primary">
+<img src="/CareerWing/Aditya_Sati .jpg">
+</div>
+</div>
+<h4 class="text-lg font-semibold text-black dark:text-white mb-1">Aditya Sati</h4>
+<p class="text-gray-600 dark:text-gray-300 text-sm mb-3">Manager, Career Development Wing</p>
+<div class="flex items-center text-sm text-gray-500 dark:text-gray-400 mb-2">
+<i class="ri-mail-line mr-2"></i>
+<a href="mailto:aityasati23@iitk.ac.in" class="hover:text-primary">aityasati23@iitk.ac.in</a>
+</div>
+<div class="flex items-center text-sm text-gray-500 dark:text-gray-400">
+<i class="ri-linkedin-box-line mr-2"></i>
+<a href="https://www.linkedin.com/in/aditya-sati-55a94a2a3/?originalSubdomain=in" class="hover:text-primary">LinkedIn Profile</a>
+</div>
+</div>
+<!-- Manager 4 -->
+<div class="bg-white dark:bg-gray-900 rounded-lg p-6 custom-shadow hover:shadow-md transition">
+<div class="w-16 h-16 bg-gray-200 dark:bg-gray-700 rounded-full mb-4 overflow-hidden">
+<div class="w-full h-full flex items-center justify-center bg-primary/10 text-primary">
+<img src="/CareerWing/Aryamann.jpeg">
+</div>
+</div>
+<h4 class="text-lg font-semibold text-black dark:text-white mb-1">Aryamann Srivastava</h4>
+<p class="text-gray-600 dark:text-gray-300 text-sm mb-3">Manager, Career Development Wing</p>
+<div class="flex items-center text-sm text-gray-500 dark:text-gray-400 mb-2">
+<i class="ri-mail-line mr-2"></i>
+<a href="mailto:aryamanns23@iitk.ac.in" class="hover:text-primary">aryamanns23@iitk.ac.in</a>
+</div>
+<div class="flex items-center text-sm text-gray-500 dark:text-gray-400">
+<i class="ri-linkedin-box-line mr-2"></i>
+<a href="https://www.linkedin.com/in/aryamann-srivastava-033674280/?originalSubdomain=in" class="hover:text-primary">LinkedIn Profile</a>
+</div>
+</div>
+<!-- Manager 5 -->
+<div class="bg-white dark:bg-gray-900 rounded-lg p-6 custom-shadow hover:shadow-md transition col-span-1 sm:col-span-2 md:col-span-1 mx-auto sm:mx-0 sm:col-start-1 md:col-start-auto">
+<div class="w-16 h-16 bg-gray-200 dark:bg-gray-700 rounded-full mb-4 overflow-hidden">
+<div class="w-full h-full flex items-center justify-center bg-primary/10 text-primary">
+<img src="/CareerWing/Ayush_Kumar.jpg">
+</div>
+</div>
+<h4 class="text-lg font-semibold text-black dark:text-white mb-1">Ayush Kumar</h4>
+<p class="text-gray-600 dark:text-gray-300 text-sm mb-3">Manager, Career Development Wing</p>
+<div class="flex items-center text-sm text-gray-500 dark:text-gray-400 mb-2">
+<i class="ri-mail-line mr-2"></i>
+<a href="mailto:ayushkumar23@iitk.ac.in" class="hover:text-primary">ayushkumar23@iitk.ac.in</a>
+</div>
+<div class="flex items-center text-sm text-gray-500 dark:text-gray-400">
+<i class="ri-linkedin-box-line mr-2"></i>
+<a href="https://www.linkedin.com/in/ayush-kumar-754772287/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="hover:text-primary">LinkedIn Profile</a>
+
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-white text-gray-900 pt-16 pb-8">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+      <!-- Column 1 -->
+      <div>
+         <div class="flex items-center space-x-3 pb-3">
+        <img src="https://www.anciitk.co.in/favicon.ico" alt="CDEV Logo" class="h-10 w-auto">
+        <h3 class="text-xl font-semibold mb-0">Career Development Wing</h3>
+      </div>
+        <p class="text-gray-600 mb-6">
+          Empowering students to build successful careers through guidance, training, and industry connections.
+        </p>
+        <div class="flex space-x-4">
+          <a href="#" class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center hover:bg-primary transition">
+            <i class="ri-facebook-fill text-gray-700"></i>
+          </a>
+          <a href="#" class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center hover:bg-primary transition">
+            <i class="ri-twitter-fill text-gray-700"></i>
+          </a>
+          <a href="#" class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center hover:bg-primary transition">
+            <i class="ri-instagram-line text-gray-700"></i>
+          </a>
+          <a href="#" class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center hover:bg-primary transition">
+            <i class="ri-linkedin-fill text-gray-700"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Column 2 -->
+      <div>
+        <h3 class="text-xl font-semibold mb-4">Quick Links</h3>
+        <ul class="space-y-3">
+          <li><a href="#" class="text-gray-600 hover:text-primary transition">Home</a></li>
+          <li><a href="#about" class="text-gray-600 hover:text-primary transition">About Us</a></li>
+          <li><a href="#itp" class="text-gray-600 hover:text-primary transition">Internship Training Program</a></li>
+          <li><a href="#collaborations" class="text-gray-600 hover:text-primary transition">Collaborations</a></li>
+          <li><a href="#contact" class="text-gray-600 hover:text-primary transition">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3 -->
+      <div>
+        <h3 class="text-xl font-semibold mb-4">Resources</h3>
+        <ul class="space-y-3">
+          <li><a href="https://drive.google.com/drive/folders/1-V_02xy2OYvv2oisw0bTuc2fDcN1mrIj" class="text-gray-600 hover:text-primary transition">Resume Templates</a></li>
+          <li><a href="https://drive.google.com/drive/folders/1zJBCoNXUq-21GLSjNtL3WYQohwTK-M6W" class="text-gray-600 hover:text-primary transition">Training Sessions</a></li>
+          <li><a href="https://drive.google.com/drive/folders/1mrAamEIaywvB2Y4L4f1-PugDWsaKa5WM" class="text-gray-600 hover:text-primary transition">Preparation Resources</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 4 -->
+      <div>
+        <h3 class="text-xl font-semibold mb-4">Contact</h3>
+        <ul class="space-y-3">
+          <li class="flex items-start">
+            <i class="ri-map-pin-line mt-1 mr-3 text-gray-700"></i>
+            <span class="text-gray-600">Career Development Wing, IIT Kanpur, Kanpur, UP 208016</span>
+          </li>
+          <li class="flex items-center">
+            <i class="ri-mail-line mr-3 text-gray-700"></i>
+            <a href="mailto:ug_anc@iitk.ac.in" class="text-gray-600 hover:text-primary transition">ug_anc@iitk.ac.in</a>
+          </li>
+          <li class="flex items-center">
+            <i class="ri-phone-line mr-3 text-gray-700"></i>
+            <span class="text-gray-600">+91 512 259 7236</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="border-t border-gray-200 pt-8">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <p class="text-gray-600 mb-4 md:mb-0">© 2025 Career Development Wing, IIT Kanpur. All rights reserved.</p>
+        <p class="text-gray-600">Designed by <span class="text-gray-600 font-semibold">Abhinav Kumar Pandey & Palak Agarwal</span></p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Back to Top Button -->
+<button id="back-to-top" class="fixed bottom-6 right-6 w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center opacity-0 invisible transition-all duration-300 shadow-lg">
+<i class="ri-arrow-up-line ri-lg"></i>
+</button>
+<!-- Scripts -->
+<script id="theme-and-menu-script">
+document.addEventListener('DOMContentLoaded', function() {
+// Theme toggle functionality
+function toggleTheme() {
+const isDark = document.documentElement.classList.contains('dark');
+const themeToggleIcon = document.getElementById('theme-toggle').querySelector('i');
+const themeToggleMobileIcon = document.getElementById('theme-toggle-mobile').querySelector('i');
+if (isDark) {
+document.documentElement.classList.remove('dark');
+localStorage.setItem('theme', 'light');
+themeToggleIcon.classList.remove('ri-moon-line');
+themeToggleIcon.classList.add('ri-sun-line');
+themeToggleMobileIcon.classList.remove('ri-moon-line');
+themeToggleMobileIcon.classList.add('ri-sun-line');
+} else {
+document.documentElement.classList.add('dark');
+localStorage.setItem('theme', 'dark');
+themeToggleIcon.classList.remove('ri-sun-line');
+themeToggleIcon.classList.add('ri-moon-line');
+themeToggleMobileIcon.classList.remove('ri-sun-line');
+themeToggleMobileIcon.classList.add('ri-moon-line');
+}
+}
+// Check for saved theme preference and update icons accordingly
+const savedTheme = localStorage.getItem('theme') || 'light';
+const themeToggleIcon = document.getElementById('theme-toggle').querySelector('i');
+const themeToggleMobileIcon = document.getElementById('theme-toggle-mobile').querySelector('i');
+if (savedTheme === 'dark') {
+document.documentElement.classList.add('dark');
+themeToggleIcon.classList.remove('ri-sun-line');
+themeToggleIcon.classList.add('ri-moon-line');
+themeToggleMobileIcon.classList.remove('ri-sun-line');
+themeToggleMobileIcon.classList.add('ri-moon-line');
+}
+// Theme toggle buttons
+const themeToggle = document.getElementById('theme-toggle');
+const themeToggleMobile = document.getElementById('theme-toggle-mobile');
+themeToggle.addEventListener('click', toggleTheme);
+themeToggleMobile.addEventListener('click', toggleTheme);
+// Mobile menu functionality
+const mobileMenuButton = document.getElementById('mobile-menu-button');
+const mobileMenu = document.getElementById('mobile-menu');
+mobileMenuButton.addEventListener('click', function() {
+mobileMenu.classList.toggle('hidden');
+// Toggle icon
+const icon = mobileMenuButton.querySelector('i');
+if (mobileMenu.classList.contains('hidden')) {
+icon.classList.remove('ri-close-line');
+icon.classList.add('ri-menu-line');
+} else {
+icon.classList.remove('ri-menu-line');
+icon.classList.add('ri-close-line');
+}
+});
+// Close mobile menu when clicking on a link
+const mobileLinks = mobileMenu.querySelectorAll('a');
+mobileLinks.forEach(link => {
+link.addEventListener('click', function() {
+mobileMenu.classList.add('hidden');
+const icon = mobileMenuButton.querySelector('i');
+icon.classList.remove('ri-close-line');
+icon.classList.add('ri-menu-line');
+});
+});
+});
+</script>
+<script id="back-to-top-script">
+document.addEventListener('DOMContentLoaded', function() {
+const backToTopButton = document.getElementById('back-to-top');
+// Show/hide button based on scroll position
+window.addEventListener('scroll', function() {
+if (window.pageYOffset > 300) {
+backToTopButton.classList.remove('opacity-0', 'invisible');
+backToTopButton.classList.add('opacity-100', 'visible');
+} else {
+backToTopButton.classList.remove('opacity-100', 'visible');
+backToTopButton.classList.add('opacity-0', 'invisible');
+}
+});
+// Scroll to top when button is clicked
+backToTopButton.addEventListener('click', function() {
+window.scrollTo({
+top: 0,
+behavior: 'smooth'
+});
+});
+});
+</script>
+<script id="smooth-scroll-script">
+document.addEventListener('DOMContentLoaded', function() {
+const links = document.querySelectorAll('a[href^="#"]');
+links.forEach(link => {
+link.addEventListener('click', function(e) {
+// Only prevent default if the href is not just "#"
+if (this.getAttribute('href') !== '#') {
+e.preventDefault();
+const targetId = this.getAttribute('href');
+const targetElement = document.querySelector(targetId);
+if (targetElement) {
+window.scrollTo({
+top: targetElement.offsetTop - 80, // Adjust for header height
+behavior: 'smooth'
+});
+}
+}
+});
+});
+});
+</script>
+</body>
+</html>
